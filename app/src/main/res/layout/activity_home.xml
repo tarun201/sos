@@ -44,6 +44,8 @@
         android:textSize="30sp"
         android:id="@+id/textView" />
 
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -131,15 +133,17 @@
     </LinearLayout>
 
 
-    <Button
-        android:text="Request"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center"
-        android:textSize="18sp"
-        android:onClick="mainactivity"
-        android:id="@+id/button6" />
+        <Button
+            android:text="Request"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:onClick="mainactivity"
+            android:id="@+id/button6" />
+
+    </LinearLayout>
 
 
 </LinearLayout>
