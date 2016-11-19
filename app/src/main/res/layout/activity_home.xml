@@ -2,19 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15">
         <!-- SOS Button -->
         <Button
             android:text="SOS"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="16dp"
+
+            android:layout_marginLeft="60dp"
+            android:layout_gravity="center_vertical"
             android:textSize="18sp"
             android:id="@+id/button" />
 
@@ -22,18 +25,63 @@
             android:text="CALL 108"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="16dp"
+
+            android:layout_marginLeft="70dp"
+            android:layout_gravity="center_vertical"
             android:textSize="18sp"
             android:id="@+id/button1" />
 
     </LinearLayout>
+
     <TextView
         android:text="Select the Emergency Services :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
-
         android:textSize="30sp" />
+
+        <RadioButton
+            android:text="Ambulence"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="32dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:id="@+id/radiobutton1" />
+
+        <RadioButton
+            android:text="Fire Truck"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:id="@+id/radiobutton2" />
+
+        <RadioButton
+            android:text="Police"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:id="@+id/radiobutton3" />
+
+
+        <Button
+            android:text="Request"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:onClick="mainactivity"
+            android:id="@+id/button6" />
+
+
+
+
+
 
 </LinearLayout>
