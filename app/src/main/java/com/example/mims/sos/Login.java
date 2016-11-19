@@ -1,6 +1,7 @@
 package com.example.mims.sos;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,7 +20,7 @@ public class Login extends MainActivity
 
     public void mainactivity (View view)
     {
-        String number = "7777777777";
+        String number = "9900236246";
         Uri call = Uri.parse("tel:" + number);
         Intent surf = new Intent(Intent.ACTION_DIAL, call);
         startActivity(surf);
