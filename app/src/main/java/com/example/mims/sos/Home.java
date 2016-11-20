@@ -1,6 +1,7 @@
 package com.example.mims.sos;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,5 +21,12 @@ public class Home extends MainActivity
     {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+    }
+    public void call (View view)
+    {
+            String number = "108";
+            Uri call = Uri.parse("tel:" + number);
+            Intent surf = new Intent(Intent.ACTION_DIAL, call);
+            startActivity(surf);
     }
 }

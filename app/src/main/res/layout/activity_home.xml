@@ -14,25 +14,27 @@
         android:orientation="horizontal">
         <!-- SOS Button -->
         <Button
-            android:id="@+id/button"
+            android:id="@+id/sos_button1"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="32dp"
             android:background="#990000"
-            android:shadowColor="@android:color/holo_red_dark"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:text="SOS"
-            android:textSize="18sp" />
+            android:textStyle="bold"/>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/call_button"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="128dp"
             android:background="#990000"
             android:text="@string/call_108"
-            android:textSize="18sp" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:onClick="call"/>
     </LinearLayout>
 
 
@@ -45,7 +47,7 @@
         android:paddingTop="16dp"
         android:text="@string/service_type"
         android:textColor="#090b01"
-        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold" />
 
 
@@ -61,13 +63,14 @@
             android:layout_height="74dp"
             android:background="@drawable/ambulence_icon"
             android:text=""
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_gravity="center"/>
 
 
         <Switch
             android:id="@+id/switchbutton1"
-            android:layout_width="95dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="140dp"
             android:layout_marginTop="10dp"
@@ -87,13 +90,14 @@
             android:layout_height="74dp"
             android:background="@drawable/fire_truck_icon"
             android:text=""
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_gravity="center"/>
 
 
         <Switch
             android:id="@+id/switchbutton2"
-            android:layout_width="95dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="140dp"
             android:layout_marginTop="1dp"
@@ -118,9 +122,9 @@
 
         <Switch
             android:id="@+id/switchbutton3"
-            android:layout_width="95dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginLeft="140dp"
             android:layout_marginTop="1dp"
             android:textSize="18sp" />
@@ -128,14 +132,16 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/request_button"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:onClick="mainactivity"
         android:text="Request"
-        android:textSize="18sp" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
 
     </LinearLayout>
 

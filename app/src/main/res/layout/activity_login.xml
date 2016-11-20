@@ -73,6 +73,6 @@
         android:layout_marginLeft="140dp"
         android:textSize="18sp"
         android:id="@+id/button"
-        android:onClick="mainactivity"/>
+        android:onClick=""/>
 
 </LinearLayout>

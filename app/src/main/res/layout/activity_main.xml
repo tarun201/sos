@@ -4,224 +4,302 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="com.example.mims.sos.MainActivity"
     android:weightSum="1"
-    android:background="@android:color/background_light">
+    tools:context="com.example.mims.sos.MainActivity">
 
-    <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="Enter your Personal Details :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="380dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/first_name"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/last_name"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="First Name : "
-                android:layout_marginRight="16dp"
-                android:textSize="20sp"
-                android:ems="6"
-                android:id="@+id/textview1" />
+                android:orientation="horizontal">
 
-            <EditText
+                <TextView
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/DOB"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editdob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="date"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text=""
-                android:ems="8"
-                android:id="@+id/editText1" />
-    </LinearLayout>
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/B_G"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/BG"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editD_G"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="textCapCharacters"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/allergies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="Allergies : "
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editallergies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="textAutoCorrect"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mobile_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/Contacts"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editmobile_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/address"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="textPostalAddress"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/city"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editcity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="textAutoCorrect"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/state"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editstate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="textAutoCorrect"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/pincode"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editpin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="number"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ems="6"
+                    android:text="@string/email"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:inputType="textEmailAddress"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Last Name : "
-            android:layout_marginRight="16dp"
-            android:textSize="20sp"
-            android:ems="6"
-            android:id="@+id/textview2" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text=""
-            android:ems="8"
-            android:id="@+id/editText2" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date of Birth : "
-            android:layout_marginRight="16dp"
-            android:textSize="20sp"
-            android:ems="6"
-            android:id="@+id/textview3" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:text=""
-            android:ems="8"
-            android:id="@+id/editText3" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Blood Group : "
-            android:layout_marginRight="16dp"
-            android:textSize="20sp"
-            android:ems="6"
-            android:id="@+id/textview4" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textCapCharacters"
-            android:text=""
-            android:ems="8"
-            android:id="@+id/editText4" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Allergies : "
-            android:layout_marginRight="16dp"
-            android:textSize="20sp"
-            android:ems="6"
-            android:id="@+id/textview5" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textAutoCorrect"
-            android:text=""
-            android:ems="8"
-            android:id="@+id/editText5" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contacts : "
-            android:layout_marginRight="16dp"
-            android:textSize="20sp"
-            android:ems="6"
-            android:id="@+id/textview6" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:text=""
-            android:ems="8"
-            android:id="@+id/editText6" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="State : "
-            android:layout_marginRight="16dp"
-            android:textSize="20sp"
-            android:ems="6"
-            android:id="@+id/textview7" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textAutoCorrect"
-            android:text=""
-            android:ems="8"
-            android:id="@+id/editText7" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="City : "
-            android:layout_marginRight="16dp"
-            android:textSize="20sp"
-            android:ems="6"
-            android:id="@+id/textview8" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textAutoCorrect"
-            android:text=""
-            android:ems="8"
-            android:id="@+id/editText8" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email : "
-            android:layout_marginRight="16dp"
-            android:textSize="20sp"
-            android:ems="6"
-            android:id="@+id/textview9" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:text=""
-            android:ems="8"
-            android:id="@+id/editText9" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <Button
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="contacts"
             android:text="Done"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            android:id="@+id/button"
-            android:onClick="contacts"/>
+            android:textSize="16sp" />
 
         <Button
-            android:text="Login Page(Temp)"
+            android:id="@+id/login"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            android:id="@+id/button2"
-            android:onClick="login"/>
+            android:onClick="login"
+            android:text="Login Page(Temp)"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </LinearLayout>

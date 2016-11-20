@@ -3,4 +3,15 @@
     <string name="login">Login :</string>
     <string name="service_type">Select the Emergency Services :</string>
     <string name="call_108">CALL 108</string>
+    <string name="first_name">First Name :</string>
+    <string name="last_name">Last Name :</string>
+    <string name="DOB">Date Of Birth :</string>
+    <string name="BG">Blood Group :</string>
+    <string name="allergies">Allergies :</string>
+    <string name="Contacts">Phone Number:</string>
+    <string name="state">State :</string>
+    <string name="city">City :</string>
+    <string name="pincode">Pincode :</string>
+    <string name="address">Address:</string>
+    <string name="email">E-Mail :</string>
 </resources>
