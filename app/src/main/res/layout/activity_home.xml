@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -139,3 +140,146 @@
 
 
 </LinearLayout>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_weight="0.15"
+        android:background="@drawable/a_background2"
+        android:orientation="horizontal">
+        <!-- SOS Button -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="32dp"
+            android:background="#990000"
+            android:shadowColor="@android:color/holo_red_dark"
+            android:text="SOS"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="128dp"
+            android:background="#990000"
+            android:text="@string/call_108"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:text="@string/service_type"
+        android:textColor="#090b01"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="76dp"
+            android:layout_height="74dp"
+            android:background="@drawable/ambulence_icon"
+            android:text=""
+            android:textSize="30sp" />
+
+
+        <Switch
+            android:id="@+id/switchbutton1"
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="76dp"
+            android:layout_height="74dp"
+            android:background="@drawable/fire_truck_icon"
+            android:text=""
+            android:textSize="30sp" />
+
+
+        <Switch
+            android:id="@+id/switchbutton2"
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="1dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="76dp"
+            android:layout_height="74dp"
+            android:background="@drawable/police_car_icon"
+            android:text=""
+            android:textSize="30sp" />
+
+
+        <Switch
+            android:id="@+id/switchbutton3"
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="1dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:onClick="mainactivity"
+        android:text="Request"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
+>>>>>>> c16634fede5407247466ab6bfa94f0d0d3162388
