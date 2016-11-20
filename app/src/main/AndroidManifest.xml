@@ -11,7 +11,8 @@
 
         <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 
-        <activity android:name=".Login">
+        <activity android:name=".Login"
+                  android:screenOrientation="portrait"> <!--To fix the rotation of the screen-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.DIAL" />
@@ -20,19 +21,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" 
+                  android:screenOrientation="portrait"> <!--To fix the rotation of the screen-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Contacts">
+        <activity android:name=".Contacts" 
+                  android:screenOrientation="portrait"> <!--To fix the rotation of the screen-->
         </activity>
 
         <activity
             android:name=".Home"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"> <!--To fix the rotation of the screen-->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
