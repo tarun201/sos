@@ -9,8 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:layout_weight="0.15"
-        android:background="@drawable/a_background2"
+        android:layout_weight="0.5"
         android:orientation="horizontal">
         <!-- SOS Button -->
         <Button
@@ -19,8 +18,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="32dp"
-            android:background="#990000"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:background="#D50000"
+            android:textAppearance="?android:textAppearanceLarge"
             android:text="SOS"
             android:textStyle="bold"/>
 
@@ -30,9 +29,9 @@
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="128dp"
-            android:background="#990000"
+            android:background="#D50000"
             android:text="@string/call_108"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textAppearance="?android:textAppearanceLarge"
             android:textStyle="bold"
             android:onClick="call"/>
     </LinearLayout>
@@ -47,7 +46,7 @@
         android:paddingTop="16dp"
         android:text="@string/service_type"
         android:textColor="#090b01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="?android:textAppearanceLarge"
         android:textStyle="bold" />
 
 
