@@ -36,20 +36,12 @@
 
                 <TextView
                     android:id="@+id/first_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/first_name"
-                    android:textSize="20sp" />
-
+                    style="@style/text_view_login"
+                    android:text="@string/first_name" />
                 <EditText
                     android:id="@+id/edit_first_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
-                    android:inputType="textPersonName"
-                    android:hint="" />
+                    style="@style/edit_text_login"
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
             <LinearLayout
@@ -59,20 +51,13 @@
 
                 <TextView
                     android:id="@+id/last_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/last_name"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/last_name" />
 
                 <EditText
                     android:id="@+id/edit_last_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
-                    android:inputType="textPersonName"
-                    android:text="" />
+                    style="@style/edit_text_login"
+                    android:inputType="textPersonName" />
 
             </LinearLayout>
 
@@ -83,18 +68,12 @@
 
                 <TextView
                     android:id="@+id/dob"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/DOB"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/DOB" />
 
                 <EditText
                     android:id="@+id/editdob"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
+                    style="@style/edit_text_login"
                     android:inputType="date"
                     android:hint="dd/mm/yyyy" />
             </LinearLayout>
@@ -105,20 +84,14 @@
 
                 <TextView
                     android:id="@+id/B_G"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/BG"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/BG" />
 
                 <EditText
                     android:id="@+id/editD_G"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
+                    style="@style/edit_text_login"
                     android:inputType="textCapCharacters"
-                    android:text="" />
+                    android:layout_width="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
@@ -127,20 +100,13 @@
 
                 <TextView
                     android:id="@+id/allergies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="Allergies : "
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="Allergies : " />
 
                 <EditText
                     android:id="@+id/editallergies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
-                    android:inputType="textAutoCorrect"
-                    android:text="" />
+                    style="@style/edit_text_login"
+                    android:inputType="textAutoCorrect" />
             </LinearLayout>
 
             <LinearLayout
@@ -149,18 +115,12 @@
 
                 <TextView
                     android:id="@+id/mobile_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/Contacts"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/Contacts" />
 
                 <EditText
                     android:id="@+id/editmobile_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
+                    style="@style/edit_text_login"
                     android:inputType="phone" />
             </LinearLayout>
 
@@ -170,20 +130,13 @@
 
                 <TextView
                     android:id="@+id/address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/address"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/address" />
 
                 <EditText
                     android:id="@+id/editaddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
-                    android:inputType="textPostalAddress"
-                    android:text="" />
+                    style="@style/edit_text_login"
+                    android:inputType="textPostalAddress" />
             </LinearLayout>
 
             <LinearLayout
@@ -192,20 +145,13 @@
 
                 <TextView
                     android:id="@+id/city"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/city"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/city" />
 
                 <EditText
                     android:id="@+id/editcity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
-                    android:inputType="textAutoCorrect"
-                    android:text="" />
+                    style="@style/edit_text_login"
+                    android:inputType="textAutoCorrect" />
             </LinearLayout>
 
             <LinearLayout
@@ -214,20 +160,13 @@
 
                 <TextView
                     android:id="@+id/state"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/state"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/state" />
 
                 <EditText
                     android:id="@+id/editstate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
-                    android:inputType="textAutoCorrect"
-                    android:text="" />
+                    style="@style/edit_text_login"
+                    android:inputType="textAutoCorrect" />
             </LinearLayout>
 
             <LinearLayout
@@ -236,20 +175,13 @@
 
                 <TextView
                     android:id="@+id/pin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/pincode"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/pincode" />
 
                 <EditText
                     android:id="@+id/editpin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
-                    android:inputType="number"
-                    android:text="" />
+                    style="@style/edit_text_login"
+                    android:inputType="number" />
             </LinearLayout>
 
             <LinearLayout
@@ -258,20 +190,13 @@
 
                 <TextView
                     android:id="@+id/email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ems="6"
-                    android:text="@string/email"
-                    android:textSize="20sp" />
+                    style="@style/text_view_login"
+                    android:text="@string/email" />
 
                 <EditText
                     android:id="@+id/editemail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="8"
-                    android:inputType="textEmailAddress"
-                    android:text="" />
+                    style="@style/edit_text_login"
+                    android:inputType="textEmailAddress" />
             </LinearLayout>
 
         </LinearLayout>
@@ -288,6 +213,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
             android:onClick="contacts"
             android:text="Done"
             android:textSize="16sp" />

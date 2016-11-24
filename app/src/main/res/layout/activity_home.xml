@@ -33,7 +33,7 @@
             android:text="@string/call_108"
             android:textAppearance="?android:textAppearanceLarge"
             android:textStyle="bold"
-            android:onClick="call"/>
+            android:onClick="call" />
     </LinearLayout>
 
 
