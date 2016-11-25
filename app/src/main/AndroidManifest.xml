@@ -16,7 +16,8 @@
 
         <activity
             android:name=".Login"
-            android:screenOrientation="portrait"> <!-- To fix the rotation of the screen -->
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
