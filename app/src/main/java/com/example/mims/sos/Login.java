@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends BaseActivity implements View.OnClickListener {
 
-    boolean login = false;
+
 
     private static final String TAG = "EmailPassword";
 
@@ -60,8 +60,8 @@ public class Login extends BaseActivity implements View.OnClickListener {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
-                    //login =true;
-                    Log.d(TAG, "Login user state: " + login);
+
+
                     dir2home();
 
 
@@ -77,8 +77,6 @@ public class Login extends BaseActivity implements View.OnClickListener {
 
                 } else {
                     // User is signed out
-
-                    Log.d(TAG, "Login user state: " + login);
 
 
                     Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -121,7 +119,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
                                     Toast.LENGTH_SHORT).show();
 
                         } else {
-                            //login=true;
+
                             dir2home();
                         }
 
@@ -154,12 +152,11 @@ public class Login extends BaseActivity implements View.OnClickListener {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(Login.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
-                            //login=false;
-                            Log.d(TAG, "Login state: " + login);
+
                         } else {
 
                             dir2home();
-                            Log.d(TAG, "Login state: " + login);
+
                         }
 
                         // [START_EXCLUDE]
@@ -244,7 +241,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
 
     public void signOut() {
         mAuth.signOut();
-        login = false;
+
 
         updateUI(null);
 
