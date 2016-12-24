@@ -213,7 +213,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
     }
 
 
-//    public void Mainactivity(View view) {
+//    private void Mainactivity(View view) {
 //        Intent intent = new Intent(this, MainActivity.class);
 //        startActivity(intent);
 //    }
@@ -239,7 +239,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
     }
 
 
-    public void signOut() {
+    private void signOut() {
         mAuth.signOut();
 
 
@@ -276,4 +276,6 @@ public class Login extends BaseActivity implements View.OnClickListener {
 
 
     }
+
+
 }

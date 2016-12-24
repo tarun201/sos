@@ -78,5 +78,7 @@
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
 
+    <!-- Strings for Action Bar -->
+    <string name="action_settings">Settings</string>
 
 </resources>
