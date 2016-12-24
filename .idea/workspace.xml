@@ -2563,7 +2563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482567246904</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="First Commit">
+      <created>1482567360671</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1482567360671</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2903,6 +2910,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="38" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+          <folding>
+            <marker date="1480049297841" expanded="false" signature="7989:8030" ph="&quot;User ID: {user.getUid()}&quot;" />
+            <marker date="1480049297841" expanded="false" signature="8065:8111" ph="&quot;Email: {user.getEmail()}&quot;" />
+            <marker date="1480049297841" expanded="false" signature="8162:8181" ph="&quot;Signed Out&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2917,6 +2929,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
