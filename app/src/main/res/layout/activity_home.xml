@@ -11,6 +11,8 @@
         android:layout_height="64dp"
         android:layout_weight="0.5"
         android:orientation="horizontal">
+
+
         <!-- SOS Button -->
         <Button
             android:id="@+id/sos_button1"
@@ -22,6 +24,7 @@
             android:textAppearance="?android:textAppearanceLarge"
             android:text="SOS"
             android:textStyle="bold"/>
+
 
         <Button
             android:id="@+id/call_button"

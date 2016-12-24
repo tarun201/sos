@@ -34,5 +34,7 @@ public class Home extends MainActivity
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, "Calling 108....", duration);
         toast.show();
+
     }
+
 }

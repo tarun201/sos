@@ -3,6 +3,7 @@ package com.example.mims.sos;
  * Created by MIMs on 11/12/2016.
  */
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,6 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 public class Login extends BaseActivity implements View.OnClickListener {
+
+    boolean login = false;
 
     private static final String TAG = "EmailPassword";
 
@@ -57,6 +60,11 @@ public class Login extends BaseActivity implements View.OnClickListener {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
+                    //login =true;
+                    Log.d(TAG, "Login user state: " + login);
+                    dir2home();
+
+
                     // Name, email address, and profile photo Url
                     String name = user.getDisplayName();
                     String email = user.getEmail();
@@ -66,8 +74,13 @@ public class Login extends BaseActivity implements View.OnClickListener {
                     // authenticate with your backend server, if you have one. Use
                     // FirebaseUser.getToken() instead.
                     String uid = user.getUid();
+
                 } else {
                     // User is signed out
+
+                    Log.d(TAG, "Login user state: " + login);
+
+
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
                 // [START_EXCLUDE]
@@ -96,7 +109,9 @@ public class Login extends BaseActivity implements View.OnClickListener {
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+
 
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
@@ -104,6 +119,10 @@ public class Login extends BaseActivity implements View.OnClickListener {
                         if (!task.isSuccessful()) {
                             Toast.makeText(Login.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
+
+                        } else {
+                            //login=true;
+                            dir2home();
                         }
 
                         // [START_EXCLUDE]
@@ -111,6 +130,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
                         // [END_EXCLUDE]
                     }
                 });
+
     }
 
     private void signIn(String email, String password) {
@@ -124,6 +144,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
 
                         // If sign in fails, display a message to the user. If sign in succeeds
@@ -133,16 +154,26 @@ public class Login extends BaseActivity implements View.OnClickListener {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(Login.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
+                            //login=false;
+                            Log.d(TAG, "Login state: " + login);
+                        } else {
+
+                            dir2home();
+                            Log.d(TAG, "Login state: " + login);
                         }
 
                         // [START_EXCLUDE]
                         if (!task.isSuccessful()) {
                             mStatusTextView.setText(R.string.auth_failed);
+
                         }
                         hideProgressDialog();
                         // [END_EXCLUDE]
+
                     }
                 });
+
+
     }
     // [END sign_in_with_email]
 
@@ -199,6 +230,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
             findViewById(R.id.email_password_buttons).setVisibility(View.GONE);
             findViewById(R.id.email_password_fields).setVisibility(View.GONE);
             findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
+
         } else {
             mStatusTextView.setText(R.string.signed_out);
             mDetailTextView.setText(null);
@@ -210,9 +242,12 @@ public class Login extends BaseActivity implements View.OnClickListener {
     }
 
 
-    private void signOut() {
+    public void signOut() {
         mAuth.signOut();
+        login = false;
+
         updateUI(null);
+
     }
 
 
@@ -221,12 +256,27 @@ public class Login extends BaseActivity implements View.OnClickListener {
         int i = v.getId();
         if (i == R.id.email_create_account_button) {
             createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
+
         } else if (i == R.id.email_sign_in_button) {
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
 
 
         } else if (i == R.id.sign_out_button) {
+
             signOut();
+
         }
+
+
+    }
+
+
+    public void dir2home() {
+
+
+        Intent intent = new Intent(this, Home.class);
+        startActivity(intent);
+
+
     }
 }
