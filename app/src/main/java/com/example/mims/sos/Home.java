@@ -64,6 +64,7 @@ public class Home extends MainActivity
 
                 startActivity(new Intent(this, Login.class));
                 FirebaseAuth.getInstance().signOut();
+                finish();
                 return true;
 
             default:

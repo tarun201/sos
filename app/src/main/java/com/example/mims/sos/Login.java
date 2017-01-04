@@ -36,10 +36,15 @@ public class Login extends BaseActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
+    //SharedPreference Declaration
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
 
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
@@ -65,6 +70,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
                     dir2home();
 
 
+
                     // Name, email address, and profile photo Url
                     String name = user.getDisplayName();
                     String email = user.getEmail();
@@ -82,7 +88,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
                 // [START_EXCLUDE]
-                updateUI(user);
+//                updateUI(user);
                 // [END_EXCLUDE]
             }
 
@@ -121,6 +127,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
                         } else {
 
                             dir2home();
+
                         }
 
                         // [START_EXCLUDE]
@@ -153,9 +160,11 @@ public class Login extends BaseActivity implements View.OnClickListener {
                             Toast.makeText(Login.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
 
+
                         } else {
 
                             dir2home();
+
 
                         }
 
@@ -218,32 +227,32 @@ public class Login extends BaseActivity implements View.OnClickListener {
 //        startActivity(intent);
 //    }
 
-    private void updateUI(FirebaseUser user) {
-        hideProgressDialog();
-        if (user != null) {
-            mStatusTextView.setText(getString(R.string.emailpassword_status_fmt, user.getEmail()));
-            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
-
-            findViewById(R.id.email_password_buttons).setVisibility(View.GONE);
-            findViewById(R.id.email_password_fields).setVisibility(View.GONE);
-            findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
-
-        } else {
-            mStatusTextView.setText(R.string.signed_out);
-            mDetailTextView.setText(null);
-
-            findViewById(R.id.email_password_buttons).setVisibility(View.VISIBLE);
-            findViewById(R.id.email_password_fields).setVisibility(View.VISIBLE);
-            findViewById(R.id.sign_out_button).setVisibility(View.GONE);
-        }
-    }
+//    private void updateUI(FirebaseUser user) {
+//        hideProgressDialog();
+//        if (user != null) {
+//            mStatusTextView.setText(getString(R.string.emailpassword_status_fmt, user.getEmail()));
+//            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+//
+//            findViewById(R.id.email_password_buttons).setVisibility(View.GONE);
+//            findViewById(R.id.email_password_fields).setVisibility(View.GONE);
+//            findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
+//
+//        } else {
+//            mStatusTextView.setText(R.string.signed_out);
+//            mDetailTextView.setText(null);
+//
+//            findViewById(R.id.email_password_buttons).setVisibility(View.VISIBLE);
+//            findViewById(R.id.email_password_fields).setVisibility(View.VISIBLE);
+//            findViewById(R.id.sign_out_button).setVisibility(View.GONE);
+//        }
+//    }
 
 
     private void signOut() {
         mAuth.signOut();
+        finish();
 
-
-        updateUI(null);
+//        updateUI(null);
 
     }
 
@@ -273,6 +282,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
 
         Intent intent = new Intent(this, Home.class);
         startActivity(intent);
+        finish();
 
 
     }
