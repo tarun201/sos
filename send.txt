@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>eduladder login</title>
+</head>
+<body align = middle bgcolor = "black">
+<font color = "gold">
+<img src="http://eduladder.com/images/app/logo.jpg" align middle>
+<h1>Login</h1>
+<p><input type="text" placeholder="Enter Username Here"></p>
+<p><input type="password" placeholder="Enter Password Here"></p>
+<p><input type="checkbox" checked="unchecked">Remember user</p>
+<button><font color="blue">Sign In</font></button><br>
+<a href="http://eduladder.com/login.php">forgot password</a>
+</font>
+</body>
+</html>
